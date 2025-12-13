@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f0f0f0;
+}
+
+#logos_container {
+    background-color: #ffffff;
+    padding: 25px 15px;
+    border-bottom: 4px solid #0066cc;
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-item {
+    flex: 0 0 auto; 
+    border: 1px solid #ddd;
+    padding: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+.logo-item:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.logo-item img {
+    display: block; 
+    max-width: 150px;
+    height: auto;
+}
