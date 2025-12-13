@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практична робота №1</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            font-size: 1.2em;
+            text-align: center;
+        }
+        td {
+            border: 2px solid black;
+            padding: 20px;
+            min-width: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Практична робота №1: Карти зображень та Таблиці</h1>
+
+    <hr>
+
+    <h2>Завдання 1, Варіант 1: "Робочий стіл" (v1.jpg)</h2>
+
+    <img src="v1.jpg" alt="Робочий стіл з ноутбуком, телефоном та кавою" usemap="#desktop_map" style="width: 800px;">
+
+    <map name="desktop_map">
+        <area shape="rect" coords="110, 60, 690, 625" 
+              href="https://rozetka.com.ua/" 
+              alt="Комп'ютер (онлайн магазин)" 
+              target="_blank">
+
+        <area shape="rect" coords="710, 240, 790, 440" 
+              href="https://rozetka.com.ua/" 
+              alt="Телефон (онлайн магазин)" 
+              target="_blank">
+
+        <area shape="circle" coords="800, 560, 60" 
+              href="https://rozetka.com.ua/" 
+              alt="Кава (онлайн магазин)" 
+              target="_blank">
+    </map>
+
+    <hr>
+
+    <h2>Завдання 1, Варіант 2: "Web-технології" (v2.png)</h2>
+
+    <img src="v2.png" alt="Схема веб-технологій" usemap="#webtech_map" style="width: 400px;">
+
+    <map name="webtech_map">
+        <area shape="poly" coords="200,205, 200,20, 20,150" 
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS" 
+              alt="Курс по CSS" 
+              target="_blank">
+
+        <area shape="poly" coords="200,205, 200,20, 380,150" 
+              href="https://developer.mozilla.org/en-US/docs/Learn_web_development" 
+              alt="Курс по HTTP" 
+              target="_blank">
+
+        <area shape="poly" coords="200,205, 380,150, 310,380" 
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML" 
+              alt="Курс по HTML" 
+              target="_blank">
+
+        <area shape="poly" coords="200,205, 310,380, 90,380" 
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" 
+              alt="Курс по JavaScript" 
+              target="_blank">
+    </map>
+
+    <hr>
+
+    <h2>Завдання 2, Варіант 17: Таблиця</h2>
+
+    <table border="1">
+        <caption>Таблиця (Варіант 17)</caption>
+        
+        <tr>
+            <td colspan="2">Клітинка 1</td> <td rowspan="2">Клітинка 2</td> </tr>
+
+        <tr>
+            <td colspan="2">Клітинка 3</td>
+        </tr>
+
+        <tr>
+            <td rowspan="2">Клітинка 5</td>
+            <td rowspan="2">Клітинка 6</td>
+            <td>Клітинка 7</td>
+        </tr>
+
+        <tr>
+            <td>Клітинка 8</td>
+        </tr>
+
+        <tr>
+            <td colspan="3">Клітинка 9</td>
+        </tr>
+
+    </table>
+
+</body>
+</html>
