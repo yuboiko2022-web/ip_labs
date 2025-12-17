@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практична робота №2 - Методологія BEM</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header__top">
+            <div class="header__logo-container">
+                <img src="logo.png" alt="Львівська Політехніка" class="header__logo">
+                <h1 class="header__title">НАЦІОНАЛЬНИЙ УНІВЕРСИТЕТ «ЛЬВІВСЬКА ПОЛІТЕХНІКА»</h1>
+            </div>
+            <div class="header__tools">
+                <div class="header__languages">
+                    <span class="header__lang header__lang--active">UK</span>
+                    <span class="header__lang">EN</span>
+                    <span class="header__lang">DE</span>
+                </div>
+                <form class="header__search">
+                    <input type="text" class="header__search-input" placeholder="Search">
+                    <button type="submit" class="header__search-button">Q</button>
+                </form>
+            </div>
+        </div>
+        <nav class="header__nav">
+            <ul class="header__menu-list">
+                <li class="header__menu-item header__menu-item--has-submenu">Політехніка</li>
+                <li class="header__menu-item header__menu-item--has-submenu">Інститути</li>
+                <li class="header__menu-item header__menu-item--has-submenu">Освіта</li>
+                <li class="header__menu-item">Вступнику</li>
+                <li class="header__menu-item">Студенту</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero_container" class="hero">
+            <div class="hero__content">
+                <h2 class="hero__title">12 березня – день голосування на виборах ректора</h2>
+            </div>
+        </section>
+
+        <section class="news">
+            <h2 class="news__section-title">Новини університету</h2>
+            <div class="news__grid">
+                <article class="news__card">
+                    <div class="news__image-wrapper">
+                        <img src="news1.jpg" alt="Новина" class="news__image">
+                        <span class="news__date">27 ЛИСТОП. 2025, 09:07</span>
+                    </div>
+                    <h3 class="news__title">Асистентка кафедри будівельного виробництва Оксана Рихліцька...</h3>
+                </article>
+                </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__column">
+            <h3 class="footer__title">Громадські організації</h3>
+            <ul class="footer__list">
+                <li class="footer__item"><a href="#" class="footer__link">Товариство «Просвіта»</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Колегія студентів</a></li>
+            </ul>
+        </div>
+        <div class="footer__column">
+            <h3 class="footer__title">Зворотний зв'язок</h3>
+            <p class="footer__text">Телефони гарячої лінії</p>
+            <p class="footer__text">Канцелярія: coffice@lpnu.ua</p>
+        </div>
+        <div class="footer__column">
+            <h3 class="footer__title">Офіційний веб-сайт</h3>
+            <p class="footer__text">© Національний університет «Львівська політехніка», 2005-2025.</p>
+            <div class="footer__cert">
+                <img src="iso.png" alt="ISO 9001" class="footer__cert-icon">
+                <span>Сертифікат якості</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

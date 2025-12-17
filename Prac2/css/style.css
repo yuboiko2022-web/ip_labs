@@ -1,0 +1,125 @@
+/* Змінні проекту */
+:root {
+    --primary-blue: #1d3557;
+    --accent-blue: #3a86ff;
+    --text-dark: #333;
+    --bg-light: #f8f9fa;
+    --white: #ffffff;
+}
+
+/* Базові стилі */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: var(--text-dark);
+}
+
+/* Блок Header */
+.header {
+    background-color: var(--white);
+    border-bottom: 2px solid var(--bg-light);
+}
+
+.header__top {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.header__logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.header__nav {
+    background-color: var(--bg-light);
+}
+
+.header__menu-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 10px 20px;
+}
+
+.header__menu-item {
+    margin-right: 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.header__menu-item--has-submenu::after {
+    content: " ▼";
+    font-size: 10px;
+}
+
+/* Блок Новини */
+.news {
+    padding: 40px 20px;
+}
+
+.news__grid {
+    display: grid;
+    gap: 20px;
+}
+
+.news__card {
+    background: var(--white);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.news__image {
+    width: 100%;
+    height: auto;
+}
+
+/* Блок Footer */
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    background-color: var(--bg-light);
+    border-top: 1px solid #ddd;
+}
+
+.footer__column {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer__title {
+    color: var(--primary-blue);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+/* Адаптивність (Медіа-запити) */
+
+/* Mobile: до 767px */
+@media (max-width: 767px) {
+    .header__top {
+        flex-direction: column;
+        align-items: center;
+    }
+    .header__menu-list {
+        flex-direction: column;
+    }
+    .news__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tablet: 768px – 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .news__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Desktop: 1024px і більше */
+@media (min-width: 1024px) {
+    .news__grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
