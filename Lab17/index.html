@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab : Todo API Fetch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <header class="app-header">
+        <h1 class="app-header__title" id="mainHeader">TODO список (API)</h1>
+      </header>
+
+      <section class="todo-form">
+        <form id="todoForm">
+          <div class="todo-form__group">
+            <input
+              type="text"
+              name="title"
+              class="todo-form__input"
+              placeholder="Назва задачі"
+              required
+              autocomplete="off"
+            />
+          </div>
+          <div class="todo-form__group">
+            <textarea
+              name="description"
+              class="todo-form__textarea"
+              placeholder="Детальний опис задачі"
+              rows="2"
+            ></textarea>
+          </div>
+          <div class="todo-form__row">
+            <select name="tag" class="todo-form__select">
+              <option value="Навчання">Навчання</option>
+              <option value="Робота">Робота</option>
+              <option value="Хобі">Хобі</option>
+            </select>
+            <input type="date" name="deadline" class="todo-form__input" />
+          </div>
+          <div class="todo-form__actions">
+            <button type="reset" class="btn btn--secondary">
+              <svg class="btn__icon">
+                <use href="img/sprite.svg#icon-reset"></use>
+              </svg>
+              Очистити
+            </button>
+            <button type="submit" class="btn btn--primary">
+              <svg class="btn__icon">
+                <use href="img/sprite.svg#icon-save"></use>
+              </svg>
+              <span class="btn__text">Додати задачу</span>
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <div
+        id="loadingIndicator"
+        style="
+          text-align: center;
+          display: none;
+          margin-bottom: 20px;
+          color: #6b7280;
+          font-weight: 500;
+        "
+      >
+        ⏳ Завантаження даних з сервера...
+      </div>
+
+      <section id="todoList" class="task-list"></section>
+    </div>
+
+    <template id="task-template">
+      <div class="task-card">
+        <div class="task-card__content">
+          <div class="task-card__header">
+            <span class="task-card__title"></span>
+            <span class="task-card__tag"></span>
+          </div>
+          <p class="task-card__desc"></p>
+          <div class="task-card__meta">
+            👤 Студент ID: <strong class="task-card__userid"></strong> | 🔑
+            Запис #<span class="task-card__id"></span> <br />
+            ⏳ Створено: <span class="task-card__created"></span> <br />
+            📅 Дедлайн: <span class="task-card__deadline"></span> <br />
+            <span class="task-card__status">Статус: В роботі</span>
+          </div>
+        </div>
+        <div class="task-card__actions">
+          <button class="btn btn--success btn--complete" title="Виконано">
+            <svg class="btn__icon">
+              <use href="img/sprite.svg#icon-checked"></use>
+            </svg>
+          </button>
+          <button class="btn btn--edit btn--edit-action" title="Редагувати">
+            <svg class="btn__icon">
+              <use href="img/sprite.svg#icon-edit"></use>
+            </svg>
+          </button>
+          <button class="btn btn--danger btn--delete" title="Видалити">
+            <svg class="btn__icon">
+              <use href="img/sprite.svg#icon-delete"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </template>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
